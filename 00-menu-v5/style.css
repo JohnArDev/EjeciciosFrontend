@@ -1,0 +1,76 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: #212735;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+li::before {
+    content: '';
+    width: 0;
+    height: 42px;
+    position: absolute;
+    left: -10px;
+    transition: width 2s;
+    border-right: 5px solid;
+}
+
+a {
+    display: inline;
+    font-size: 42px;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ccc;
+    transition: -webkit-text-stroke-color 2s;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Configuracion para cada uno */
+
+.a1:before {
+    border-color: blue;
+}
+.a2:before {
+    border-color:  pink;
+}
+.a3:before {
+    border-color: yellow;
+}
+.a4:before {
+    border-color: greenyellow;
+}
+.a5:before {
+    border-color:  purple;
+}
+
+/* Configuracion de animacion */
+
+li:hover:before{
+    width: 105%;
+}
+
+li:hover a {
+    -webkit-text-stroke-color: blue;
+}
